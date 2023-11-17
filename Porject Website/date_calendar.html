@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <link rel="icon" type="image/jpg" href="image/W.png">  
+    <!-- Add the evo-calendar.css for styling -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="evo-calendar.midnight-blue.min.css">
+    <link rel="stylesheet" href="evo-calendar.min.css">
+    <link rel="stylesheet" href="./css/date.css">
+
+</head>
+<body>
+     <!--Navigation bar-->
+     <header>
+        <div class="logo">
+        <a href="https://www.instagram.com/silver87_gg/"><img src="image/W.png" alt="logo" width="75" height="75"></a>
+         </div>
+    <nav>
+        <ul class="nav_links">
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="note_page.php">NOTES</a></li> <!--In note there is category--><!--add category in note-->
+            <li><a href="date_calendar.html">CALENDAR</a></li>
+            <li><a href="feedback.html">FEEDBACK</a></li>
+        </ul>
+    </nav>
+    <a href="logout.php" class="btn btn-warning"><button>log out</button></a>
+    <div id="sl" onclick="toggleMobileMenu(this)">
+       <div class="bar1"></div>
+       <div class="bar2"></div>
+       <div class="bar3"></div>
+       <ul class="mobile-menu">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="note_page.php">NOTES</a></li> <!--In note there is category--><!--add category in note-->
+        <li><a href="date_calendar.html">CALENDAR</a></li>
+        <li><a href="feedback.html">FEEDBACK</a></li>
+        <a href="logout.php" class="btn btn-warning"><button>log out</button></a>
+       </ul>
+    </div>
+</header>
+
+<div class="hero">
+
+  <div id="calendar"></div>
+  <script>
+    $("#calendar").evoCalendar();
+  </script>
+
+</div>
+
+<!-- Add jQuery library (required) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<!-- Add the evo-calendar.js for.. obviously, functionality! -->
+<script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
+<script src="evo-calendar.min.js"></script>
+<script>
+  // Initialize evo-calendar in your script file or an inline <script> tag
+$(document).ready(function() {
+    $('#calendar').evoCalendar({
+
+      theme: "Midnight Blue", 
+      calendarEvents: [{
+        id: 'event 1', // Event's ID (required)
+        name: "New Year", // Event name (required)
+        date: "January/1/2020", // Event date (required)
+        description: "New Year", // Event description
+        type: "holiday", // Event type (required)
+        everyYear: true // Same event every year (optional)
+      },
+      {
+        id: 'event 2', // Event's ID (required)
+        name: "Happy birth day", // Event name (required)
+        date: "September/14/2004", // Event date (required)
+        description: "happy birthday", // Event description
+        type: "event", // Event type (required)
+        everyYear: true // Same event every year (optional)
+      },
+      {
+        name: "Vacation Leave",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["February/13/2020", "February/15/2020"], // Date range
+        description: "Vacation leave for 3 days.", // Event description (optional)
+        type: "event",
+        color: "#63d867" // Event custom color (optional)
+      }
+    ]
+  });
+    })
+</script>
+         <!-- Simple Footer -->
+  <footer>
+    <p>&copy; 2023 W-Tracking</p>
+    <p><a href="">Terms of Service</a> | <a href="">Privacy Policy</a></p>
+</p>
+<!--<div class="container">
+    <a href="logout.php" class="btn btn-warning">Log Out</a>
+</div>-->
+<div class="social-icons">
+  <a href="https://www.instagram.com"><i class="fa-brands fa-instagram fa-gl"></i></a>
+  <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+  <a href="https://www.twitter.com"><i class="fa-brands fa-twitter fa-gl"></i></a>
+</div>
+  </footer>
+</body>
+</html>
+  </body>
+</html>
